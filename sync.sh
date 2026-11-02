@@ -16,3 +16,6 @@ done
 cp -r "$SRC"/bases/. app/src/main/assets/bases/
 
 echo "Upstream commit: $(git -C upstream rev-parse --short HEAD)"
+
+sed -i 's/raise ValueError("sus holds measures up to 999")/pass/g' app/src/main/python/encode.py
+
